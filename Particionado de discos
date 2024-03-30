@@ -1,0 +1,17 @@
+diskpart
+list disk
+select disk 2
+convert dynamic
+select disk 1
+convert dynamic
+create volume simple size=5120
+list volume
+select volume 4
+extend size=30720 disk=2
+assign letter=E
+Format FS=NTFS LABEL=Copias_AD
+create volume simple size=25598
+list volume
+select volume 5
+assign letter=F
+format FS=NTFS LABEL=Ficheros
