@@ -1,0 +1,7 @@
+Get-WindowsFeature | Where Installed
+Install-WindowsFeature -Name AD-Domain-Services
+Install-WindowsFeature -Name DNS
+Install-WindowsFeature -Name GPMC
+Install-WindowsFeature -Name RSAT-AD-AdminCenter
+Install-WindowsFeature -Name RSAT-DNS-Server
+Get-WindowsFeature | Where Installed
